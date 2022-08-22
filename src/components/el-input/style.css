@@ -1,0 +1,62 @@
+.el-input {
+  position: relative;
+  margin: 10px auto;
+  margin-top: 30px;
+}
+.el-input input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+}
+.el-input input:focus {
+  outline: none;
+}
+
+.el-input label {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  transition: 0.3s all ease;
+  font-size: 14px;
+  width: 100%;
+  color: #888888;
+}
+
+.el-input input:disabled + label,
+.el-input input:disabled {
+  color: #888888;
+}
+
+.el-input input:focus + label,
+.el-input.filled input + label {
+  bottom: 30px;
+  font-size: 12px;
+}
+
+.el-input input:focus + label {
+  color: #4285f4;
+}
+.el-input .line:before {
+  content: '';
+  position: absolute;
+  background: #4285f4;
+  width: 0px;
+  height: 2px;
+  right: 50%;
+  bottom: 0;
+}
+.el-input input:focus ~ .line:before,
+.el-input.filled .line:before {
+  width: 100%;
+  right: 0;
+  transition: all 0.3s ease;
+}
+.el-input.is-error input + label,
+.el-input.is-error input {
+  color: #ff0000;
+}
+
+.el-input.is-error input ~ .line:before {
+  background: #ff0000;
+}
